@@ -1,0 +1,14 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger: none
+pool:
+  name: Default
+steps:
+- task: DownloadGitHubNugetPackage@1
+  inputs:
+    packageName: 'azure-pipelines-tasks/OctocatApp'
+    externalEndpoints: '0173124b-8f85-444f-8381-f0033aa1736b'
+    version: '1.0.0'
